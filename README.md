@@ -22,3 +22,7 @@ returns information about move input
 node liri.js do-what-it-says
 
 mystery... find out!
+
+link to video of it working:
+
+https://drive.google.com/file/d/1mblzfkvd1qeeK60rA5LyXKKspFDXyFRy/view
