@@ -43,7 +43,7 @@ function spotifyThisSong(songname) {
         console.log('Name: ' + data.tracks.items[0].name)
         console.log('Preview Link: ' + data.tracks.items[0].external_urls.spotify)
         console.log('Album: ' + data.tracks.items[0].album.name)
-        
+
     });
 }
 
@@ -83,7 +83,19 @@ function doWhatItSays() {
             return console.log(error);
         }
         var dataArr = data.split(",");
-        spotifyThisSong(dataArr[1]);
+        if (dataArr[0] === 'spotify-this-song') {
+            spotifyThisSong(dataArr[1]);
+        }
+        else if (dataArr[0] === 'movie-this') {
+            movieThis(dataArr[1])
+        }
+        else if (dataArr[0] === 'concert-this') {
+            concertThis(dataArr[1])
+        }
+        else {
+            console.log("invalid text file input")
+        }
+        
 
     });
 }
